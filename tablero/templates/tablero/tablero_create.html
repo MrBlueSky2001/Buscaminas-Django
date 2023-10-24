@@ -1,7 +1,22 @@
-<!DOCTYPE html>
-<html>
-<body>
-    <p>Hi there!</p>
-    <p>It works!</p>
-</body>
-</html>
+{% extends 'tablero/principal.html' %}
+
+{% block content %}
+
+<h1>Formulario del Buscaminas</h1>
+<form method="get">
+    {{ form.non_field_errors }}
+    <div class="form-group">
+        {{ form.filas.label_tag }}
+        {{ form.filas }}
+        {{ form.filas.errors }}
+    </div>
+    <br>
+    <div class="form-group">
+        {{ form.columnas.label_tag }}
+        {{ form.columnas }}
+        {{ form.columnas.errors }}
+    </div>
+    <br>
+    <button type="submit">Crear Tablero</button>
+</form>
+{% endblock %}

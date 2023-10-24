@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscaminas</title>
+</head>
+<body>
+<header>
+    <h2>
+        <a href="{% url 'index2' %}">Principal</a>
+    </h2>
+</header>
+<main>
+    {% block content %}
+
+    {% endblock %}
+</main>
+
+</body>
+</html>

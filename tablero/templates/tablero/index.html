@@ -1,0 +1,14 @@
+{% extends 'tablero/principal.html' %}
+
+{% block content %}
+    <h1>Tablero del Buscaminas</h1>
+    <table>
+        {% for fila in tablero %}
+            <tr>
+                {% for celda in fila %}
+                    <td style="width: 10px; height: 10px; border: black solid 1px">{{ celda }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

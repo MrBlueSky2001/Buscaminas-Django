@@ -3,7 +3,8 @@
 {% block content %}
 
 <h1>Formulario del Buscaminas</h1>
-<form method="get">
+<form method="post">
+    {% csrf_token %}
     {{ form.non_field_errors }}
     <div class="form-group">
         {{ form.filas.label_tag }}
@@ -15,6 +16,22 @@
         {{ form.columnas }}
     </div>
     <br>
+    <div class="form-group">
+        {{ form.num_minas.label_tag }}
+        {{ form.num_minas }}
+    </div>
+    <br>
     <button type="submit">Crear Tablero</button>
 </form>
+<h1>Tablero del Buscaminas</h1>
+    <table>
+        {% for fila in tablero %}
+            <tr>
+                {% for celda in fila %}
+                    <td style="width: 10px; height: 10px; border: black solid 1px">{{ celda }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock %}
+

@@ -1,37 +1,3 @@
-# from django import forms
-
-# def validador_filas_columnas(value, filas_min=0, filas_max=20, columnas_min=0, columnas_max=15):
-#     if value < filas_min or value > filas_max:
-#         raise forms.ValidationError(f"El valor debe estar entre {filas_min} y {filas_max} para filas.")
-#     if value < columnas_min or value > columnas_max:
-#         raise forms.ValidationError(f"El valor debe estar entre {columnas_min} y {columnas_max} para columnas.")
-
-# class TableroForm(forms.Form):
-#     filas = forms.IntegerField(validators=[validador_filas_columnas])
-#     columnas = forms.IntegerField(validators=[validador_filas_columnas])
-#     num_minas = forms.IntegerField(validators=[validador_num_minas])
-
-
-# ////////////////////////////
-
-# from django import forms
-
-# def validador_filas_columnas_minas(value, filas_min=0, filas_max=20, columnas_min=0, columnas_max=15, min_minas=0):
-#     if value < filas_min or value > filas_max:
-#         raise forms.ValidationError(f"El valor debe estar entre {filas_min} y {filas_max} para filas.")
-#     if value < columnas_min or value > columnas_max:
-#         raise forms.ValidationError(f"El valor debe estar entre {columnas_min} y {columnas_max} para columnas.")
-#     if value < min_minas:
-#         raise forms.ValidationError(f"El número de minas debe ser mayor o igual a {min_minas}.")
-
-
-# class TableroForm(forms.Form):
-#     filas = forms.IntegerField(validators=[validador_filas_columnas_minas])
-#     columnas = forms.IntegerField(validators=[validador_filas_columnas_minas])
-#     num_minas = forms.IntegerField(validators=[validador_filas_columnas_minas])
-
-# /////////////////////////////////////////
-
 from django import forms
 
 def validador_filas_columnas(value, filas_min=0, filas_max=20, columnas_min=0, columnas_max=15):

@@ -36,21 +36,19 @@ class Tablero:
                                 casilla.minas_adyacentes += 1
 
     def mostrar_tablero(self):
+        tablero_html = []
         for fila in range(self.filas):
+            fila_html = []
             for columna in range(self.columnas):
                 casilla = self.tablero[fila][columna]
                 if casilla.contiene_mina:
-                    print('M', end=' ')
+                    fila_html.append('M')
                 elif casilla.minas_adyacentes > 0:
-                    print(casilla.minas_adyacentes, end=' ')
+                    fila_html.append(str(casilla.minas_adyacentes))
                 else:
-                    print(' ', end=' ')
-            print()
+                    fila_html.append('')
+            tablero_html.append(fila_html)
 
-# Ejemplo de uso
-# filas = 5
-# columnas = 5
-# num_minas = 5
-# tablero = Tablero(filas, columnas, num_minas)
-# tablero.mostrar_tablero()
+        return tablero_html
+
 

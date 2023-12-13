@@ -2,11 +2,17 @@
 {% extends 'tablero/principal.html' %}
 
 {% block content %}
+    <!-- Título de la página para el tablero del Buscaminas -->
     <h1>Tablero del Buscaminas</h1>
+
+    <!-- Tabla para representar el tablero del Buscaminas -->
     <table>
+        <!-- Itera sobre cada fila en el tablero -->
         {% for fila in tablero %}
             <tr>
+                <!-- Itera sobre cada celda en la fila -->
                 {% for celda in fila %}
+                    <!-- Celda de la tabla con estilo y contenido de la celda del tablero -->
                     <td style="width: 10px; height: 10px; border: black solid 1px">{{ celda }}</td>
                 {% endfor %}
             </tr>

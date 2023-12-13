@@ -3,27 +3,41 @@
 
 {% block content %}
 
+<!-- Encabezado de la página -->
 <h1>Formulario del Buscaminas</h1>
+
+<!-- Formulario para crear el tablero -->
 <form method="post">
     {% csrf_token %}
+    
+    <!-- Muestra errores generales del formulario (si los hay) -->
     {{ form.non_field_errors }}
+
+    <!-- Campo para el número de filas -->
     <div class="form-group">
         {{ form.filas.label_tag }}
         {{ form.filas }}
     </div>
     <br>
+
+    <!-- Campo para el número de columnas -->
     <div class="form-group">
         {{ form.columnas.label_tag }}
         {{ form.columnas }}
     </div>
     <br>
+
+    <!-- Campo para el número de minas -->
     <div class="form-group">
         {{ form.num_minas.label_tag }}
         {{ form.num_minas }}
     </div>
     <br>
+
+    <!-- Botón para enviar el formulario -->
     <button type="submit">Crear Tablero</button>
 </form>
+
 {% endblock %}
 
 

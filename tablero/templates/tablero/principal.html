@@ -4,20 +4,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Configuración del encabezado HTML -->
     <meta charset="UTF-8">
     <title>Buscaminas</title>
+
+    <!-- Carga de archivos estáticos (CSS, JS, etc.) -->
+    {% block extra_head %}{% endblock %}
 </head>
 <body>
-<header>
-    <h2>
-        <a href="{% url 'index2' %}">Principal</a>
-    </h2>
-</header>
-<main>
-    {% block content %}
+    <!-- Encabezado de la página -->
+    <header>
+        <h2>
+            <!-- Enlace a la página principal (index2) -->
+            <a href="{% url 'index2' %}">Principal</a>
+        </h2>
+    </header>
+    <!-- Contenido principal de la página -->
+    <main>
+        {% block content %}
 
-    {% endblock %}
-</main>
-
+        {% endblock %}
+    </main>
 </body>
 </html>
